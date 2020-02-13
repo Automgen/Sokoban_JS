@@ -9,12 +9,19 @@ class Element {
     constructor(x,y,id,str){
         this.coordX = x;
         this.coordY = y;
-        this.id = is;
+        this.id = id;
         this.sprite = document.getElementById(this.id);
+        this.setSrc(str);
+        this.placer();
+    }
+
+    setSrc(str){
+        this.sprite.src = str;
     }
 
     placer() {
-        this.sprite.style.top = ``
+        this.sprite.style.left = `${51+(this.coordX)*20}px`;
+        this.sprite.style.top = `${51+(this.coordY)*20}px`;
     }
 
 }

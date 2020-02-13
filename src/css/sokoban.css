@@ -3,6 +3,12 @@
     position: fixed;
 }
 
+#niveau {
+    position: fixed;
+    top: 100px;
+    left: 550px;
+}
+
 #grille {
     position: fixed;
     top: 51px;
