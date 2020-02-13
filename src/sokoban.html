@@ -1,14 +1,31 @@
-<html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">	
 	<title>Sokoban JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="css/sokoban.css">
 </head>
 <body>
+	<!-- div contenant tous les éléments -->
+	<div id="elements">
+		<!-- image associée au joueur -->
+		<img id="joueur" src="images/joueur.gif">
+	</div>
+
+	<div id="titre_jeu">
+		<h3>Sokoban</h3>
+	</div>
+
+	<!-- div associée aux numéro du niveau -->
 	<div id="niveau"></div>
+	<!-- div associée à la grille de 20x20 idexée à partir de 0 -->
 	<div id="grille">
 		<img src="images/fond.png">
 	</div>
 	<div id="compteur"></div>
-	<input type="button" value="recommencer">
+	<div id="lien">
+		<a href="sokoban.html">Nouvelle partie</a>
+		<a id="rec" href="#">Reset Niveau</a>
+	</div>
+	<script type="text/javascript" src="js/element.js"></script>
 </body>
 </html>

@@ -1,0 +1,46 @@
+#joueur {
+    width: 18px;
+    position: fixed;
+}
+
+#grille {
+    position: fixed;
+    top: 51px;
+    left: 51px;
+}
+
+#lien {
+    position: fixed;
+    top: 470px;
+    left: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    border: solid 1px gray;
+    border-radius: 4px;
+    background-color: lightgray;
+    box-shadow: 4px 4px 4px gray;
+    color: black;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    line-height: 1.5em;
+    padding: 5px;
+    margin: 0px 20px;
+}
+
+a:active {
+    top:2px;
+    left:2px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.element {
+    display: inline;
+    position: fixed;
+    width: 18px;
+    height: 18px;
+}
