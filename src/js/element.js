@@ -9,14 +9,9 @@ class Element {
     constructor(x,y,id,str){
         this.coordX = x;
         this.coordY = y;
-        if(id !== "joueur"){
-            this.sprite = document.createElement("img");
-            this.setSrc(str);
-            document.getElementById("elements").appendChild(this.sprite);
-        }else{
-            this.sprite = document.getElementById("joueur");
-            this.setSrc(str);
-        }
+        this.sprite = document.createElement("img");
+        this.setSrc(str);
+        document.getElementById("elements").appendChild(this.sprite);
         this.placer();
     }
 

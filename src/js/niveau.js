@@ -38,10 +38,11 @@ class Niveau {
 
     clearGrille() {
         let elementDiv = document.getElementById("elements")
-        while(elementDiv.firstChild){
-            elementDiv.removeChild(elementDiv.firstChild);
+        while(elementDiv.childElementCount > 1){
+            elementDiv.removeChild(elementDiv.firstChild)
         }
         this.grille = [];
+        this.joueur = null;
     }
 
     static lireFichierTexte(fichier) {
