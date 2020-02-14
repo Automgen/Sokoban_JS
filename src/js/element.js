@@ -15,7 +15,7 @@ class Element {
             document.getElementById("elements").appendChild(this.sprite);
         }else{
             this.sprite = document.getElementById("joueur");
-            this.setSrc(src);
+            this.setSrc(str);
         }
         this.placer();
     }
