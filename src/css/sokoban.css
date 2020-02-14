@@ -44,9 +44,10 @@ a:active {
     box-shadow: 2px 2px 2px grey;
 }
 
-.element {
+#elements > img {
     display: inline;
     position: fixed;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
 }

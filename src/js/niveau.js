@@ -2,28 +2,36 @@ class Niveau {
 
     constructor(num) {
         this.num = num;
+        this.joueur = null;
         let modelGrille = Niveau.lireFichierTexte(`./niveaux/niveau${this.num}`);
         this.grille = [];
         for (let i = 0; i < modelGrille.length; i++) {
+            let ligne = [];
             for (let j = 0; j < modelGrille[i].length; j++) {
                 switch (modelGrille[i][j]) {
                     case ('b'):
-                        this.grille[i][j] = new Brique(i, j);
+                        ligne.push(new Brique(j, i));
                         break;
 
                     case ('c'):
-                        //this.grille[i][j] = new Caisse(i, j);
+                        ligne.push(new Caisse(j, i));
                         break;
 
                     case ('d'):
-                        //this.grille[i][j] = new Drapeau(i, j);
+                        ligne.push(new Drapeau(j, i));
+                        break;
+
+                    case('j'):
+                        this.joueur = new Joueur(j, i);
+                        ligne.push(null);
                         break;
 
                     default:
-                        this.grille[i][j] = null;
+                        ligne.push(null);
                         break;
                 }
             }
+            this.grille.push(ligne);
         }
     }
 
