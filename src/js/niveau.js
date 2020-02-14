@@ -33,6 +33,7 @@ class Niveau {
             }
             this.grille.push(ligne);
         }
+        document.getElementById("niveau").innerHTML = `<p>Niveau : ${this.num}</p>`;
     }
 
     static lireFichierTexte(fichier) {
