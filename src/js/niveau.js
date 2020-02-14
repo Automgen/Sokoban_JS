@@ -36,11 +36,12 @@ class Niveau {
         document.getElementById("niveau").innerHTML = `<p>Niveau : ${this.num}</p>`;
     }
 
-    static clearGrille() {
-        let elementDiv = document.getElementById("element")
+    clearGrille() {
+        let elementDiv = document.getElementById("elements")
         while(elementDiv.firstChild){
             elementDiv.removeChild(elementDiv.firstChild);
         }
+        this.grille = [];
     }
 
     static lireFichierTexte(fichier) {
