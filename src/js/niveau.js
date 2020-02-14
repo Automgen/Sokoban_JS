@@ -36,6 +36,13 @@ class Niveau {
         document.getElementById("niveau").innerHTML = `<p>Niveau : ${this.num}</p>`;
     }
 
+    static clearGrille() {
+        let elementDiv = document.getElementById("element")
+        while(elementDiv.firstChild){
+            elementDiv.removeChild(elementDiv.firstChild);
+        }
+    }
+
     static lireFichierTexte(fichier) {
         //On lance la requête pour récupérer le fichier
         let fichierBrut = new XMLHttpRequest();
