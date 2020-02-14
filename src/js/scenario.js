@@ -29,9 +29,21 @@ function go() {
     numNivCur = 1;
     N = new Niveau(numNivCur);
     J = N.joueur;
+    document.body.addEventListener('keydown', gererClavier);
+}
+
+function resetNiveau() {
+    N.clearGrille();
+    N = new Niveau(N.num);
+    J = N.joueur;
+    numNivCur = N.num;
 }
 
 // variables
 let numNivCur;
 let N = null;
 let J = null;
+
+// lancement
+go()
+document.getElementById("rec").onclick = resetNiveau;
