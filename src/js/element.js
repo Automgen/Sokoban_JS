@@ -11,6 +11,9 @@ class Element {
         this.coordY = y;
         this.sprite = document.createElement("img");
         this.setSrc(str);
+        if(id === "joueur"){
+            this.sprite.id = "joueur";
+        }
         document.getElementById("elements").appendChild(this.sprite);
         this.placer();
     }
