@@ -4,4 +4,8 @@ class Brique extends Element{
         super(x,y,"brique","./images/brique.png");
     }
 
+    isBrique() {
+        return true;
+    }
+
 }

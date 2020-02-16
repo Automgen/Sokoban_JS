@@ -1,20 +1,37 @@
 function gererClavier(event) {
     let k = event.keyCode;
+    let jX = J.coordX;
+    let jY = J.coordY;;
+    let caseJ;
     switch (k) {
+
+
         case 37 : // touche gauche
-            J.mouvement(-1, 0);
+            caseJ = N.grille[jY][jX-1]
+            if((caseJ !== null && !caseJ.isBrique()) || caseJ === null){
+                J.mouvement(-1, 0);
+            }
             break;
 
         case 38 : // touche haut
-            J.mouvement(0, -1);
+            caseJ = N.grille[jY-1][jX];
+            if((caseJ !== null && !caseJ.isBrique()) || caseJ === null){
+                J.mouvement(0, -1);
+            }
             break;
 
         case 39 : // touche droite
-            J.mouvement(1, 0);
+            caseJ = N.grille[jY][jX+1];
+            if((caseJ !== null && !caseJ.isBrique()) || caseJ === null){
+                J.mouvement(1, 0);
+            }
             break;
 
         case 40 : //touche bas
-            J.mouvement(0, 1);
+            caseJ = N.grille[jY+1][jX];
+            if((caseJ !== null && !caseJ.isBrique()) || caseJ === null){
+                J.mouvement(0, 1);
+            }
             break;
 
         default :

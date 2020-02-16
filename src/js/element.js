@@ -22,6 +22,10 @@ class Element {
         this.sprite.src = str;
     }
 
+    isBrique(){
+        return false;
+    }
+
     placer() {
         this.sprite.style.left = `${51+(this.coordX)*20}px`;
         this.sprite.style.top = `${51+(this.coordY)*20}px`;
