@@ -56,6 +56,13 @@ function resetNiveau() {
     numNivCur = N.num;
 }
 
+function nextNiveau(){
+    numNivCur = N.num;
+    N.clearGrille();
+    N = new Niveau(++numNivCur);
+    J = N.joueur;
+}
+
 // variables
 let numNivCur;
 let N = null;
