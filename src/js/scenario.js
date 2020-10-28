@@ -37,7 +37,7 @@ function gererClavier(event) {
         default :
             break;
     }
-    if(G.allBoxesPaced()){
+    if(N.allBoxesPlaced()){
         document.body.removeEventListener('keydown', gererClavier);
     }
 }

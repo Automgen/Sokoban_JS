@@ -45,6 +45,34 @@ class Niveau {
         this.joueur = null;
     }
 
+    allBoxesPlaced() {
+
+    }
+
+    getAllBoxs() {
+        let boxs = [];
+        for (let i = 0; i < this.grille.length; i++) {
+            for (let j = 0; j < this.grille[i].length; j++) {
+                if(this.grille[i][j] instanceof Caisse) {
+                    boxs.push(this.grille[i][j]);
+                }
+            }
+        }
+        return boxs;
+    }
+
+    getAllDrapeaux() {
+        let drapeaux = [];
+        for (let i = 0; i < this.grille.length; i++) {
+            for (let j = 0; j < this.grille[i].length; j++) {
+                if(this.grille[i][j] instanceof Drapeau) {
+                    drapeaux.push(this.grille[i][j]);
+                }
+            }
+        }
+        return drapeaux;
+    }
+
     static lireFichierTexte(fichier) {
         //On lance la requête pour récupérer le fichier
         let fichierBrut = new XMLHttpRequest();
